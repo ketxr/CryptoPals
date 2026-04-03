@@ -5,8 +5,8 @@
 #ifndef CRYPTOPALS_3_SINGLE_XOR_CIPHER_H
 #define CRYPTOPALS_3_SINGLE_XOR_CIPHER_H
 #include <string>
+#include <utility>
 
-
-unsigned char findKey(std::string encodedHex);
+std::pair<unsigned char, double> findKey(std::string encodedHex);
 
 #endif //CRYPTOPALS_3_SINGLE_XOR_CIPHER_H

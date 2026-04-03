@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<unsigned char> hexToBytes(const string& hexString){
+vector<unsigned char> hexStringToBytes(const string& hexString){
     vector<unsigned char> bytes;
 
     for(int i=0; i<hexString.length(); i+=2){
@@ -21,6 +21,14 @@ string bytesToHexString(const vector<unsigned char>& bytes) {
     for (int i = 0; i < bytes.size(); i++) {
         result.push_back(hexChars[bytes[i]>>4]);
         result.push_back(hexChars[bytes[i]&0x0F]);
+    }
+    return result;
+}
+
+std::string bytesToChar(const std::vector<unsigned char>& bytes) {
+    std::string result;
+    for (unsigned char byte : bytes) {
+        result.push_back(byte);
     }
     return result;
 }
@@ -54,4 +62,12 @@ string bytesToBase64(const vector<unsigned char>& bytes){
             result.push_back('=');
    }
    return result;
+}
+
+std::string hexStringToChar(const std::string& hexString) {
+    string result;
+    auto bytes= hexStringToBytes(hexString);
+    result = bytesToChar(bytes);
+    return result;
+
 }

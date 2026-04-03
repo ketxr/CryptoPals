@@ -9,7 +9,7 @@
 #include <unordered_map>
 
 
-unsigned char findKey(std::string encodedHex) {
+std::pair<unsigned char, double> findKey(std::string encodedHex) {
 
     std::unordered_map<char, double> freq = {
         {'e', 12.7}, {'t', 9.1}, {'a', 8.2}, {'o', 7.5}, {'i', 7.0}, {'n', 6.7},
@@ -17,7 +17,7 @@ unsigned char findKey(std::string encodedHex) {
         {'s', 6.3}, {'h', 6.1}, {'r', 6.0}, {'d', 4.3}, {'l', 4.0}, {'u', 2.8}
     };
 
-    std::vector<unsigned char> encodedBytes = hexToBytes(encodedHex);
+    std::vector<unsigned char> encodedBytes = hexStringToBytes(encodedHex);
 
     double score;
     double result=-1e9;
@@ -40,10 +40,6 @@ unsigned char findKey(std::string encodedHex) {
         }
     }
 
-    for (int i = 0; i< encodedBytes.size(); i++) {
-        std::cout << (unsigned char) (encodedBytes[i] ^ key);
 
-    }
-    std::cout<<std::endl;
-    return key;
+    return {key,result};
 }
