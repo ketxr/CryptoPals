@@ -1,3 +1,9 @@
 /Set_1_Basics/1_hex_to_base64.exe
 /CMakeLists.txt
 /cmake-build-debug/
+/.idea/.gitignore
+/.idea/CryptoPals.iml
+/.idea/editor.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
