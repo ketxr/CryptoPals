@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include <vector>
 #include "../include/1_hex_to_base64.h"
 
@@ -21,7 +22,6 @@ string bytesToHexString(const vector<unsigned char>& bytes) {
         result.push_back(hexChars[bytes[i]>>4]);
         result.push_back(hexChars[bytes[i]&0x0F]);
     }
-
     return result;
 }
 
