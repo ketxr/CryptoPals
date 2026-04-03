@@ -17,6 +17,6 @@ int main() {
 
     findSentenceInFile(fileName);
 
-    //sddasdsa
+
     return 0;
 }
