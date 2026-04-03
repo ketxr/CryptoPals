@@ -2,7 +2,6 @@
 #include <vector>
 #include "../include/1_hex_to_base64.h"
 
-
 using namespace std;
 
 vector<unsigned char> hexToBytes(const string& hexString){
@@ -13,6 +12,17 @@ vector<unsigned char> hexToBytes(const string& hexString){
         bytes.push_back(byte);
     }
     return bytes;
+}
+
+string bytesToHexString(const vector<unsigned char>& bytes) {
+    string result;
+    const string hexChars = "0123456789abcdef";
+    for (int i = 0; i < bytes.size(); i++) {
+        result.push_back(hexChars[bytes[i]>>4]);
+        result.push_back(hexChars[bytes[i]&0x0F]);
+    }
+
+    return result;
 }
 
 string bytesToBase64(const vector<unsigned char>& bytes){
