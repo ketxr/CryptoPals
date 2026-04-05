@@ -16,7 +16,7 @@ int main() {
     string hex = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
     string fileName="crypted.txt";
     string text = "Burning 'em, if you ain't quick and nimble\nI go crazy when I hear a cymbal";
-    cout<<repeatingKeyXorICE(text);
+    cout<<repeatingKeyXor(text,"ICE");
 
     //proba
     return 0;

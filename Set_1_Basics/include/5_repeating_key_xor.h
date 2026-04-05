@@ -6,6 +6,6 @@
 #define CRYPTOPALS_5_REPEATING_KEY_XOR_H
 #include <string>
 
-std::string repeatingKeyXorICE(const std::string &text);
+std::string repeatingKeyXor(const std::string &text, const std::string &key);
 
 #endif //CRYPTOPALS_5_REPEATING_KEY_XOR_H
