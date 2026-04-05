@@ -19,4 +19,6 @@ std::string bytesToChar(const std::vector<unsigned char>& bytes);
 
 std::string hexStringToChar(const std::string& hexString);
 
+std::vector<unsigned char> textStringToBytes(const std::string& textString);
+
 #endif //CRYPTOPALS_1_HEX_TO_BASE64_H

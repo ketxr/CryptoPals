@@ -71,3 +71,13 @@ std::string hexStringToChar(const std::string& hexString) {
     return result;
 
 }
+
+vector<unsigned char> textStringToBytes(const string& textString) {
+    vector<unsigned char> bytes;
+
+    for(int i=0; i<textString.length(); i++){
+        unsigned char byte = (unsigned char) textString[i];
+        bytes.push_back(byte);
+    }
+    return bytes;
+}
