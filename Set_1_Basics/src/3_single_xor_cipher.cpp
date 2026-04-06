@@ -43,3 +43,37 @@ std::pair<unsigned char, double> findKey(std::string encodedHex) {
 
     return {key,result};
 }
+
+std::pair<unsigned char, double> findKeyBytes(std::vector<unsigned char> encodedBytes) {
+
+    std::unordered_map<char, double> freq = {
+        {'e', 12.7}, {'t', 9.1}, {'a', 8.2}, {'o', 7.5}, {'i', 7.0}, {'n', 6.7},
+        {' ', 13.0},
+        {'s', 6.3}, {'h', 6.1}, {'r', 6.0}, {'d', 4.3}, {'l', 4.0}, {'u', 2.8}
+    };
+
+
+    double score;
+    double result=-1e9;
+    unsigned char key='0';
+    for (int j = 0; j< 256; j++) {
+        score=0;
+        for (int i =0 ; i < encodedBytes.size(); i++) {
+            unsigned char letter = encodedBytes[i] ^ j;
+            unsigned char lower = tolower(letter);
+            if (freq.count(lower)) {
+                score += freq[lower];
+            }
+            else if (!std::isprint(lower)) {
+                score-=10;
+            }
+        }
+        if (score>result) {
+            result=score;
+            key=j;
+        }
+    }
+
+
+    return {key,result};
+}

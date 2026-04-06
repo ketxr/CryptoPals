@@ -8,5 +8,6 @@
 #include <utility>
 
 std::pair<unsigned char, double> findKey(std::string encodedHex);
+std::pair<unsigned char, double> findKeyBytes(std::vector<unsigned char> encodedBytes);
 
 #endif //CRYPTOPALS_3_SINGLE_XOR_CIPHER_H

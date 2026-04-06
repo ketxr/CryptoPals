@@ -8,4 +8,6 @@
 
 std::string repeatingKeyXor(const std::string &text, const std::string &key);
 
+
+
 #endif //CRYPTOPALS_5_REPEATING_KEY_XOR_H
