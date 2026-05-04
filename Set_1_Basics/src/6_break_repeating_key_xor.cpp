@@ -111,6 +111,12 @@ int findKeySize(std::string &fileName) {
         final.push_back(findKeyBytes(prvi).first);
     }
     std::cout << final << std::endl;
+    std::vector<unsigned char> finalBytes=textStringToBytes(final);
+    std::vector<unsigned char> decryptedBytes;
+    for (int i=0;i<bytes.size();i++) {
+        decryptedBytes.push_back(bytes[i]^finalBytes[i%keySize]);
+    }
+    std::cout<<stringifyByteArray(decryptedBytes);
     file.close();
     return keySize;
 }

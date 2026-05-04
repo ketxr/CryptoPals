@@ -25,7 +25,7 @@ string bytesToHexString(const vector<unsigned char>& bytes) {
     return result;
 }
 
-std::string bytesToChar(const std::vector<unsigned char>& bytes) {
+std::string stringifyByteArray(const std::vector<unsigned char>& bytes) {
     std::string result;
     for (unsigned char byte : bytes) {
         result.push_back(byte);
@@ -67,7 +67,7 @@ string bytesToBase64(const vector<unsigned char>& bytes){
 std::string hexStringToChar(const std::string& hexString) {
     string result;
     auto bytes= hexStringToBytes(hexString);
-    result = bytesToChar(bytes);
+    result = stringifyByteArray(bytes);
     return result;
 
 }

@@ -45,7 +45,7 @@ void findSentenceInFile(std::string fileName) {
     auto res = xorBuffers(bytes, byteKey);
 
     //print bytes in ascii
-    cout<<bytesToChar(res);
+    cout<<stringifyByteArray(res);
 
 
     file.close();

@@ -15,7 +15,7 @@ std::string bytesToBase64(const std::vector<unsigned char>& bytes);
 
 std::string bytesToHexString(const std::vector<unsigned char>& bytes);
 
-std::string bytesToChar(const std::vector<unsigned char>& bytes);
+std::string stringifyByteArray(const std::vector<unsigned char>& bytes);
 
 std::string hexStringToChar(const std::string& hexString);
 
