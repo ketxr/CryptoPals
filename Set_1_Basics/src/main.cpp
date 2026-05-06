@@ -8,6 +8,7 @@
 #include "../include/5_repeating_key_xor.h"
 #include "../include/6_break_repeating_key_xor.h"
 #include "../include/7_AES_ECB_mode.h"
+#include "../include/8_detect_AES_ECB.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -16,9 +17,9 @@ using namespace std;
 
 int main() {
 
-    string fileName="crypted_3.txt";
+    string fileName="hex_crypted_aes.txt";
 
-    cout<<decryptAES(fileName, "YELLOW SUBMARINE");
+    cout<<detectECB(fileName)<<endl;
 //dsadsa
     //proba
     return 0;
