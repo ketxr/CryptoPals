@@ -1,15 +1,18 @@
 //
 // Created by Test on 06-May-26.
 //
-#include "../include/8_detect_AES_ECB.h"
-#include "../include/1_hex_to_base64.h"
+#include "../../include/Set_1_Basics/8_detect_AES_ECB.h"
+
+#include <filesystem>
+
+#include "../../include/Set_1_Basics/1_hex_to_base64.h"
 #include <fstream>
 #include <iostream>
 #include <openssl/aes.h>
 #include <set>
 
 std::string detectECB(std::string fileName) {
-    std::ifstream file("../Set_1_Basics/files/"+fileName);
+    std::ifstream file("../CryptoPals/files/"+fileName);
     if (!file.is_open()) {
         std::cout << "File not found" << std::endl;
         return "";
@@ -27,5 +30,5 @@ std::string detectECB(std::string fileName) {
 
     }
     std::cout<<line<<std::endl;
-    return "";
+    return "No repeating blocks found";
 }

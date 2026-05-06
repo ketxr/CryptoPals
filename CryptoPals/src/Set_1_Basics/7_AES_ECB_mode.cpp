@@ -2,8 +2,8 @@
 // Created by Test on 04-May-26.
 //
 
-#include "../include/7_AES_ECB_mode.h"
-#include "../include/1_hex_to_base64.h"
+#include "../../include/Set_1_Basics/7_AES_ECB_mode.h"
+#include "../../include/Set_1_Basics/1_hex_to_base64.h"
 #include <vector>
 #include <fstream>
 #include <sstream>
@@ -14,7 +14,7 @@
 #include <iterator>
 
 std::string decryptAES(std::string fileName, std::string key) {
-    std::ifstream file("../Set_1_Basics/files/"+fileName);
+    std::ifstream file("../CryptoPals/files/"+fileName);
     if (!file.is_open()) {
         std::cout << "File not found" << std::endl;
         return "fail";

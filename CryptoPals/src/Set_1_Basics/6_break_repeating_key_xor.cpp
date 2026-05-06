@@ -1,19 +1,19 @@
 //
 // Created by petar on 4/6/2026.
 //
-#include "../include/6_break_repeating_key_xor.h"
+#include "../../include/Set_1_Basics/6_break_repeating_key_xor.h"
 
 #include <iostream>
 
-#include "../include/1_hex_to_base64.h"
-#include "../include/2_fixed_xor.h"
+#include "../../include/Set_1_Basics/1_hex_to_base64.h"
+#include "../../include/Set_1_Basics/2_fixed_xor.h"
 #include <vector>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <algorithm>
 #include <iterator>
-#include "../include/3_single_xor_cipher.h"
+#include "../../include/Set_1_Basics/3_single_xor_cipher.h"
 
 int hammingDistance(std::string str1, std::string str2) {
     std::vector<unsigned char> bytes1 = textStringToBytes(str1);
@@ -45,7 +45,7 @@ int hammingDistanceBytes(std::vector<unsigned char> bytes1, std::vector<unsigned
 
 int findKeySize(std::string &fileName) {
     int keySize=0;
-    std::ifstream file("../Set_1_Basics/files/"+fileName);
+    std::ifstream file("../CryptoPals/files/"+fileName);
     if (!file.is_open()) {
         std::cout << "File not found" << std::endl;
         return -1;

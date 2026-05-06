@@ -1,9 +1,9 @@
 //
 // Created by petar on 4/3/2026.
 //
-#include "../include/1_hex_to_base64.h"
-#include "../include/2_fixed_xor.h"
-#include "../include/3_single_xor_cipher.h"
+#include "../../include/Set_1_Basics/1_hex_to_base64.h"
+#include "../../include/Set_1_Basics/2_fixed_xor.h"
+#include "../../include/Set_1_Basics/3_single_xor_cipher.h"
 
 #include <iostream>
 #include <unordered_map>
