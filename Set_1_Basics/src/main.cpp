@@ -7,6 +7,7 @@
 #include "../include/4_find_string_from_file.h"
 #include "../include/5_repeating_key_xor.h"
 #include "../include/6_break_repeating_key_xor.h"
+#include "../include/7_AES_ECB_mode.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -15,9 +16,9 @@ using namespace std;
 
 int main() {
 
-    string fileName="crypted_2.txt";
+    string fileName="crypted_3.txt";
 
-    cout<<findKeySize(fileName);
+    cout<<decryptAES(fileName, "YELLOW SUBMARINE");
 //dsadsa
     //proba
     return 0;
