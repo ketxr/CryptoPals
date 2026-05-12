@@ -5,6 +5,11 @@
 
 using namespace std;
 
+/**
+ * Heksadecimalni broj u string formatu -> vektor bajtova
+ * @param hexString
+ * @return vector<unsigned char>
+ */
 vector<unsigned char> hexStringToBytes(const string& hexString){
     vector<unsigned char> bytes;
 
@@ -15,6 +20,11 @@ vector<unsigned char> hexStringToBytes(const string& hexString){
     return bytes;
 }
 
+/**
+ * Vektor bajtova -> heksadecimalni broj u string formatu
+ * @param bytes
+ * @return string
+ */
 string bytesToHexString(const vector<unsigned char>& bytes) {
     string result;
     const string hexChars = "0123456789abcdef";
@@ -25,6 +35,11 @@ string bytesToHexString(const vector<unsigned char>& bytes) {
     return result;
 }
 
+/**
+ * Vektor bajtova -> string po ASCII
+ * @param bytes
+ * @return string
+ */
 std::string stringifyByteArray(const std::vector<unsigned char>& bytes) {
     std::string result;
     for (unsigned char byte : bytes) {
@@ -33,6 +48,11 @@ std::string stringifyByteArray(const std::vector<unsigned char>& bytes) {
     return result;
 }
 
+/**
+ * Vektor bajtova -> Base64 string
+ * @param bytes
+ * @return string
+ */
 string bytesToBase64(const vector<unsigned char>& bytes){
     const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     string result;
@@ -64,14 +84,23 @@ string bytesToBase64(const vector<unsigned char>& bytes){
    return result;
 }
 
+/**
+ * Heksadecimalni broj u string formatu -> string po ASCII
+ * @param hexString
+ * @return string
+ */
 std::string hexStringToChar(const std::string& hexString) {
     string result;
     auto bytes= hexStringToBytes(hexString);
     result = stringifyByteArray(bytes);
     return result;
-
 }
 
+/**
+ * Bilo koji tekst -> vektor bajtova
+ * @param textString
+ * @return vector<unsigned char>
+ */
 vector<unsigned char> textStringToBytes(const string& textString) {
     vector<unsigned char> bytes;
 
@@ -82,6 +111,11 @@ vector<unsigned char> textStringToBytes(const string& textString) {
     return bytes;
 }
 
+/**
+ * Base64 string -> vektor bajtova
+ * @param base64String
+ * @return vector<unsigned char>
+ */
 vector<unsigned char> base64ToBytes(const string& base64String) {
     std::vector<unsigned char> out;
     std::vector<int> T(256, -1);
