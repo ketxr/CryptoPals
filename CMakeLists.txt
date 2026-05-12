@@ -16,6 +16,8 @@ add_executable(CryptoPals CryptoPals/src/main.cpp
         CryptoPals/src/Set_1_Basics/8_detect_AES_ECB.cpp
         CryptoPals/include/Set_2_Block_Cipher/1_PKCS7_pad.h
         CryptoPals/src/Set_2_Block_Cipher/1_PKCS7_pad.cpp
+        CryptoPals/include/Set_2_Block_Cipher/2_CBC_mode.h
+        CryptoPals/src/Set_2_Block_Cipher/2_CBC_mode.cpp
 )
 
 target_link_libraries(CryptoPals OpenSSL::SSL OpenSSL::Crypto)

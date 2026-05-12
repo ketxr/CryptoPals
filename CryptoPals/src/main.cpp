@@ -11,6 +11,7 @@
 #include "../include/Set_1_Basics/8_detect_AES_ECB.h"
 #include "../include/Set_2_Block_Cipher/1_PKCS7_pad.h"
 #include <vector>
+#include "../include/Set_2_Block_Cipher/2_CBC_mode.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -18,13 +19,12 @@ using namespace std;
 
 int main() {
 
-    vector<unsigned char> bytes;
-    bytes.push_back('A');
-    bytes.push_back('A');
-    PKCS7_pad(11, bytes);
-    for (int i =0; i<bytes.size(); i++) {
-        std::cout<<(int)bytes[i];
-    }
+
+    unsigned char key[17] = "YELLOW SUBMARINE";
+    cout<<CBC_encryptAES("Volim da igram igricajo", key)<<endl;
+    cout<<CBC_decryptAES("cbc_crypted.txt",key)<<endl;
     return 0;
+
+
 }
 

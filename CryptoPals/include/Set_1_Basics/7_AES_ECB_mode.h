@@ -6,6 +6,6 @@
 #define CRYPTOPALS_7_AES_ECB_MODE_H
 #include <string>
 
-std::string decryptAES(std::string fileName, std::string key);
-
+std::string ECB_decryptAES(std::string fileName);
+std::string ECB_encryptAES(std::string tekst);
 #endif //CRYPTOPALS_7_AES_ECB_MODE_H
